@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function wheenClick(e){
+            alert("출력")
+        }
+        window.onload=function(){
+            document.getElementById("my_form").onsubmit(function(){
+                //return false
+                var pass = document.getElementById("pass").value;
+                var pass_check = document.getElementById("pass_check").value;
+
+                if(pass == pass_check){
+                    alert("성공");
+                }else{
+                    alert("다시 입력해주세요.");
+                    return false
+                }
+
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1 onclick="var alpha = 10 ; alert(alpha)">click1</h1>
+    <h1 onclick="wheenClick(event)">click2</h1>
+    <form action="#" id="my_form">
+        <label for="name">이름</label><br>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="pass">비밀번호</label><br>
+        <input type="password" name="pass" id="pass"><br>
+
+        <label for="pass_check">비밀번호확인</label><br>
+        <input type="password" name="pass_check" id="pass_check"><br>
+
+        <input type="submit" value="제출">
+
+    </form>
+</body>
+</html>

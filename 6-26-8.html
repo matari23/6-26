@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        window.onload = function(){
+            var buttona = document.getElementById("button-a");
+            var buttonb = document.getElementById("button-b");
+            var countera = document.getElementById("counter-a");
+            var counterb = document.getElementById("counter-b");
+            buttona.onclick = function(){
+                countera.innerHTML = Number(countera.innerHTML) + 1 
+            }
+            buttonb.onclick = function(){
+                counterb.innerHTML = Number(counterb.innerHTML) + 1 
+                buttona.onclick();
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="button-a">buttonA</button>
+    <button id="button-b">buttonB</button>
+    <h1> buttonA - <span id="counter-a">0</span></h1>
+    <h1> buttonB - <span id="counter-b">0</span></h1>
+</body>
+</html>

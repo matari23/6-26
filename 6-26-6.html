@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        // window.onload = function(){
+        //     var header = document.getElementById("header");
+
+        //     function h_click(){
+        //         alert("click")
+        //     }//function h_click
+        //     header.onclick = h_click;
+        // }//window.onload
+
+        window.onload = function(){
+            var header = document.getElementById("header")
+            header.onclick = function(){
+                alert("클릭")
+                header.onclick = null;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header id="header">header_click</header>
+</body>
+</html>
